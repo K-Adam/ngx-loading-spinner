@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 import { NgxLoadingSpinnerService } from './ngx-loading-spinner.service';
 
@@ -14,7 +14,15 @@ export class NgxLoadingSpinnerComponent implements OnInit {
     this.service.timeout = v;
   }
 
+  @Input() set threshold(v: number) {
+    this.service.threshold = v;
+  }
+
   @Input() zIndex: number = 100;
+
+  @Input() loadingText ?: string;
+
+  @Input() template ?: string;
 
   visible: boolean = false;
 

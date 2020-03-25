@@ -10,20 +10,51 @@
         <thead>
           <tr>
             <th>Attribute</th>
-            <th>Value</th>
+            <th colspan="2">Value</th>
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>timeout</td>
-            <td><input type="number" class="form-control form-control-sm" [(ngModel)]="timeoutParameter" /></td>
+            <td colspan="2"><input type="number" class="form-control form-control-sm" [(ngModel)]="timeoutParameter" /></td>
             <td>The spinner will be hidden automatically after the given time (ms)</td>
           </tr>
           <tr>
+            <td>threshold</td>
+            <td colspan="2"><input type="number" class="form-control form-control-sm" [(ngModel)]="thresholdParameter" /></td>
+            <td>The spinner will be visible only, if the time between calling show() and hide() is more than <strong>threshold</strong> ms</td>
+          </tr>
+          <tr>
             <td>zIndex</td>
-            <td><input type="number" class="form-control form-control-sm" [(ngModel)]="zIndex" /></td>
-            <td>The z-index property of the spinner overlay element ( default 100 )</td>
+            <td colspan="2"><input type="number" class="form-control form-control-sm" [(ngModel)]="zIndexParameter" /></td>
+            <td>The z-index property of the spinner overlay element</td>
+          </tr>
+          <tr>
+            <td>loadingText</td>
+            <td colspan="2"><input type="text" class="form-control form-control-sm" [(ngModel)]="loadingTextParameter" /></td>
+            <td>The displayed text under the spinner</td>
+          </tr>
+          <tr>
+            <td>template</td>
+            <td [attr.colspan]="(templateType == 'NONE') ? 2 : 1">
+              <select type="text" class="form-control form-control-sm" [(ngModel)]="templateType">
+                <option value="NONE">None</option>
+                <option value="STRING">HTML code</option>
+              </select>
+            </td>
+            <td *ngIf="templateType != 'NONE'">
+
+              <ng-container [ngSwitch]="templateType">
+
+                <ng-container *ngSwitchCase="'STRING'">
+                  <input type="text" class="form-control form-control-sm" [(ngModel)]="templateTextParameter" />
+                </ng-container>
+
+              </ng-container>
+
+            </td>
+            <td>The spinner can be replaced with HTML text</td>
           </tr>
         </tbody>
       </table>
@@ -43,4 +74,10 @@
 
 </div>
 
-<ngx-loading-spinner [timeout]="timeoutParameter" [zIndex]="zIndex"></ngx-loading-spinner>
+<ngx-loading-spinner
+  [timeout]="timeoutParameter"
+  [threshold]="thresholdParameter"
+  [zIndex]="zIndexParameter"
+  [loadingText]="loadingTextParameter"
+  [template]="(templateType != 'NONE') ? ( (templateType == 'STRING') ? templateTextParameter : templateEditor ) : undefined"
+></ngx-loading-spinner>

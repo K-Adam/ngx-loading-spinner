@@ -1,3 +1,4 @@
+
 # ngx-loading-spinner
 
 Angular 8+ loader spinner. It can be used with two simple methods, `.show()` and `.hide()`. An example can be found in the `/projects/spinner-test`.
@@ -38,9 +39,9 @@ import { NgxLoadingSpinnerService } from '@k-adam/ngx-loading-spinner';
 
 Inject dependency:
 ```
-    constructor(
-        private spinnerService: NgxLoadingSpinnerService
-    ) { }
+constructor(
+    private spinnerService: NgxLoadingSpinnerService
+) { }
 ```
 
 Use show() and hide() method to control the loading spinner:
@@ -48,4 +49,25 @@ Use show() and hide() method to control the loading spinner:
 this.spinnerService.show();
 // ...
 this.spinnerService.hide();
+```
+
+### Parameters
+
+All the parameters are optional.
+| Name | Type | Default | Description
+|--|--|--|--|
+| timeout | number | 10000 ms | The spinner will be hidden automatically after the given time |
+| threshold | number  | 500 ms | The spinner will be visible only, if the time between calling show() and hide() is more than **threshold** |
+| zIndex | number  | 100 | The z-index property of the spinner overlay element |
+| loadingText | string |  | The displayed text under the spinner |
+| template | string |  | The spinner can be replaced with HTML text |
+
+Example:
+
+```
+<ngx-loading-spinner
+  [threshold]="250"
+  [timeout]="20000"
+  [loadingText]="'Loading...'"
+></ngx-loading-spinner>
 ```

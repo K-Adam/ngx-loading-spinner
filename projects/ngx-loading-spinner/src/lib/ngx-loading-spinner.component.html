@@ -1,5 +1,10 @@
 <div class="overlay noselect" [class.on]="visible" [class.off]="!visible" [style.zIndex]="zIndex">
-    <div class="spinner-container">
-        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div class="spinner-container" *ngIf="!template; else showTemplate">
+        <div class="spinner-item lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div class="spinner-item loading-text" *ngIf="loadingText">{{ loadingText }}</div>
     </div>
 </div>
+
+<ng-template #showTemplate>
+  <div class="spinner-container" [innerHTML]="template"></div>
+</ng-template>

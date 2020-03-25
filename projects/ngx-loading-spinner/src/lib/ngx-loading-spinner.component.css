@@ -32,10 +32,20 @@
 }
 
 .spinner-container {
+  color: white;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   height: 100%;
   display: flex;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
+}
+
+.loading-text {
+  text-align: center;
+  text-shadow: 0 0 0.5rem #202020;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 /* https://github.com/loadingio/css-spinner/ */
