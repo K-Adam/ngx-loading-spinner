@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && copy \"README.md\" \"dist/ngx-loading-spinner/README.md\"",
+    "build": "ng build ngx-loading-spinner --prod && copy \"README.md\" \"dist/ngx-loading-spinner/README.md\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
