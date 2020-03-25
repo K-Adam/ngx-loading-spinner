@@ -1,14 +1,21 @@
 
+
 # ngx-loading-spinner
 
 Angular 8+ loader spinner. It can be used with two simple methods, `.show()` and `.hide()`. An example can be found in the `/projects/spinner-test`.
 
 ## Setup
 
-Install library:
+Install library ( Angular 8 ):
 
 ```
-npm install @k-adam/ngx-loading-spinner --save;
+npm install @k-adam/ngx-loading-spinner --save
+```
+
+If you are using Angular 9+, then install it this way:
+
+```
+npm install @k-adam/ngx-loading-spinner@1.9 --save
 ```
 
 Import module to your applications main module:
