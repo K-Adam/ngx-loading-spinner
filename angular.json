@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/ngx-loading-spinner/tsconfig.lib.json",
             "project": "projects/ngx-loading-spinner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-loading-spinner/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -53,7 +58,7 @@
             "main": "projects/spinner-test/src/main.ts",
             "polyfills": "projects/spinner-test/src/polyfills.ts",
             "tsConfig": "projects/spinner-test/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/spinner-test/src/favicon.ico",
               "projects/spinner-test/src/assets"
@@ -76,7 +81,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -155,6 +159,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-loading-spinner"
+    }
+  },
+  "defaultProject": "ngx-loading-spinner",
+  "cli": {
+    "analytics": false
+  }
 }
