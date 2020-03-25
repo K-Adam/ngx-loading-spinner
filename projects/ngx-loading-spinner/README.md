@@ -8,4 +8,4 @@ Run `npm run build` in the workspace direcotry to build the project. The build a
 
 ## Publishing
 
-After building your library with, go to the dist folder `cd dist/ngx-loading-spinner` and run `npm publish`.
+After building your library with, go to the dist folder `cd dist/ngx-loading-spinner` and run `npm publish --access public`.

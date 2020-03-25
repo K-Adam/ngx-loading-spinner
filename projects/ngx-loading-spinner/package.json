@@ -1,6 +1,6 @@
 {
-  "name": "ngx-loading-spinner",
-  "version": "0.8.1",
+  "name": "@k-adam/ngx-loading-spinner",
+  "version": "0.8.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/K-Adam/ngx-loading-spinner"

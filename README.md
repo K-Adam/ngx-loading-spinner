@@ -4,10 +4,16 @@ Angular 8+ loader spinner. It can be used with two simple methods, `.show()` and
 
 ## Setup
 
+Install library:
+
+```
+npm install @k-adam/ngx-loading-spinner --save;
+```
+
 Import module to your applications main module:
 
 ```
-import { NgxLoadingSpinnerModule } from 'ngx-loading-spinner';
+import { NgxLoadingSpinnerModule } from '@k-adam/ngx-loading-spinner';
 ```
 
 Import it in your `NgModule`:
@@ -27,7 +33,7 @@ Place the component somewhere in your root level component:
 Import `NgxLoadingSpinnerService` to the components where you want to control the spinner:
 
 ```
-import { NgxLoadingSpinnerService } from 'ngx-loading-spinner';
+import { NgxLoadingSpinnerService } from '@k-adam/ngx-loading-spinner';
 ```
 
 Inject dependency:

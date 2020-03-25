@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+// Import from '@k-adam/ngx-loading-spinner' in your project
 import { NgxLoadingSpinnerService } from 'ngx-loading-spinner';
 
 @Component({
