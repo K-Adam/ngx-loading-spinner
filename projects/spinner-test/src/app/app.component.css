@@ -1,0 +1,13 @@
+.demo-box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.bg-red {
+  background: #FF0000;
+}
+
+.bg-green {
+  background: #00FF00;
+}

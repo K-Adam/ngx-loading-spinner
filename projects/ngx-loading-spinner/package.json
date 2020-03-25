@@ -1,0 +1,20 @@
+{
+  "name": "ngx-loading-spinner",
+  "version": "0.8.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/K-Adam/ngx-loading-spinner"
+  },
+  "author": {
+    "name": "Adam Kecskes",
+    "email": "kecskes.adam@outlook.com"
+  },
+  "keywords": [
+    "angular", "spinner", "loader"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  }
+}
