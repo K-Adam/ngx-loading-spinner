@@ -13,7 +13,7 @@ import { NgxLoadingSpinnerService } from './ngx-loading-spinner.service';
   exports: [NgxLoadingSpinnerComponent]
 })
 export class NgxLoadingSpinnerModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<NgxLoadingSpinnerModule> {
       return {
         ngModule: NgxLoadingSpinnerModule,
         providers: [NgxLoadingSpinnerService]

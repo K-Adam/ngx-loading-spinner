@@ -1,6 +1,6 @@
 {
   "name": "@k-adam/ngx-loading-spinner",
-  "version": "1.8.3",
+  "version": "1.9.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/K-Adam/ngx-loading-spinner"
@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14"
+    "@angular/common": "^9.1.0",
+    "@angular/core": "^9.1.0"
   }
 }
